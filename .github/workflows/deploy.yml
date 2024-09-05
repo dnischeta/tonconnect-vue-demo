@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Build Vue 2
+        run: |
+          cd vue-2
+          npm i
+          npm run build
+
+      - name: Build Vue 3
+        run: |
+          cd vue-3
+          npm i
+          npm run build
+
+      - name: Prepare deploy
+        run: |
+          mkdir deploy
+          mv vue-2/dist deploy/vue-2
+          mv vue-3/dist deploy/vue-3
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './deploy'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
