@@ -8,9 +8,9 @@ import { TonConnectUIProvider } from '@townsquarelabs/ui-vue'
   >
   <main>
     <header>
-      <router-link to="/">Home</router-link>
-      <router-link to="/other">Other</router-link>
-      <router-link to="/other-with-button">Other with button</router-link>
+      <router-link :to="{ name: 'home' }">Home</router-link>
+      <router-link :to="{ name: 'other' }">Other</router-link>
+      <router-link :to="{ name: 'other-with-button' }">Other with button</router-link>
     </header>
     <router-view />
   </main>

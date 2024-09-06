@@ -1,14 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomePage from './HomePage.vue'
 import OtherPage from './OtherPage.vue'
 import OtherPageWithButton from './OtherPageWithButton.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
-    { path: '/', component: HomePage },
-    { path: '/other', component: OtherPage },
-    { path: '/other-with-button', component: OtherPageWithButton },
+    { path: '/', name: 'home', component: HomePage },
+    { path: '/other', name: 'other', component: OtherPage },
+    { path: '/other-with-button', name: 'other-with-button', component: OtherPageWithButton },
   ],
 })
 

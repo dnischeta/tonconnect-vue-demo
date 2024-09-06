@@ -6,7 +6,7 @@ import ButtonView from '../views/ButtonView.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: import.meta.env.BASE_URL,
   routes: [
     {
