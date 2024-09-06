@@ -18,5 +18,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/vue-2/',
+  base: '/tonconnect-vue-demo/vue-2/',
 })
