@@ -1,12 +1,5 @@
-<script setup lang="ts">
-import { TonConnectUIProvider } from '@townsquarelabs/ui-vue'
-</script>
-
 <template>
-  <TonConnectUIProvider
-    :options="{ manifestUrl: 'https://telegram-mini-apps.github.io/solidjs-template/tonconnect-manifest.json' }"
-  >
-    <div id="app">
+  <div id="app">
       <header>
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -21,7 +14,6 @@ import { TonConnectUIProvider } from '@townsquarelabs/ui-vue'
 
       <router-view />
     </div>
-  </TonConnectUIProvider>
 </template>
 
 <style scoped>

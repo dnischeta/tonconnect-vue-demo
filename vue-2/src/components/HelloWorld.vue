@@ -8,7 +8,7 @@ const address = useTonAddress(true)
 const wallet = useTonWallet()
 const isConnectionRestored = useIsConnectionRestored()
 const modal = useTonConnectModal()
-const [ui, setOptions] = useTonConnectUI()
+const { setOptions } = useTonConnectUI()
 
 setOptions({ language: 'en' })
 </script>

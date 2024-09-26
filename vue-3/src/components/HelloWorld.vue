@@ -1,17 +1,16 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, getCurrentInstance } from 'vue'
 import { TonConnectButton, useTonAddress, useTonWallet, useIsConnectionRestored, useTonConnectModal, useTonConnectUI } from '@townsquarelabs/ui-vue'
 
 defineProps({
   msg: String,
 })
-
 const count = ref(0)
 const address = useTonAddress(true)
 const wallet = useTonWallet()
 const isConnectionRestored = useIsConnectionRestored()
 const modal = useTonConnectModal()
-const [ui, setOptions] = useTonConnectUI()
+const { setOptions } = useTonConnectUI()
 
 setOptions({ language: 'en' })
 </script>
