@@ -1,0 +1,2956 @@
+{
+    "name": "server",
+    "mode": "development",
+    "devtool": "cheap-module-source-map",
+    "optimization": {
+        "splitChunks": false,
+        "minimizer": []
+    },
+    "output": {
+        "path": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/.nuxt/dist/server",
+        "filename": "[name].js",
+        "futureEmitAssets": true,
+        "chunkFilename": "[name].js",
+        "publicPath": "/_nuxt/"
+    },
+    "performance": {
+        "maxEntrypointSize": 1024000,
+        "hints": false
+    },
+    "module": {
+        "rules": [
+            {
+                "test": {},
+                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-loader/lib/index.js",
+                "options": {
+                    "transformAssetUrls": {
+                        "video": "src",
+                        "source": "src",
+                        "object": "src",
+                        "embed": "src"
+                    },
+                    "productionMode": false
+                }
+            },
+            {
+                "test": {},
+                "oneOf": [
+                    {
+                        "resourceQuery": {},
+                        "use": [
+                            {
+                                "loader": "pug-plain-loader",
+                                "options": {}
+                            }
+                        ]
+                    },
+                    {
+                        "use": [
+                            "raw-loader",
+                            {
+                                "loader": "pug-plain-loader",
+                                "options": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "type": "javascript/auto",
+                "use": [
+                    {
+                        "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/babel-loader/lib/index.js",
+                        "options": {
+                            "configFile": false,
+                            "babelrc": false,
+                            "cacheDirectory": true,
+                            "envName": "server",
+                            "presets": [
+                                [
+                                    "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/@nuxt/babel-preset-app/src/index.js",
+                                    {
+                                        "corejs": {
+                                            "version": 3
+                                        }
+                                    }
+                                ]
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "oneOf": [
+                    {
+                        "resourceQuery": {},
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "localIdentName": "[local]_[hash:base64:5]"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "compileType": "icss"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "oneOf": [
+                    {
+                        "resourceQuery": {},
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "localIdentName": "[local]_[hash:base64:5]"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "compileType": "icss"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "oneOf": [
+                    {
+                        "resourceQuery": {},
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "localIdentName": "[local]_[hash:base64:5]"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "less-loader",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "compileType": "icss"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "less-loader",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "oneOf": [
+                    {
+                        "resourceQuery": {},
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "localIdentName": "[local]_[hash:base64:5]"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "sass-loader",
+                                "options": {
+                                    "sassOptions": {
+                                        "indentedSyntax": true
+                                    },
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "compileType": "icss"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "sass-loader",
+                                "options": {
+                                    "sassOptions": {
+                                        "indentedSyntax": true
+                                    },
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "oneOf": [
+                    {
+                        "resourceQuery": {},
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "localIdentName": "[local]_[hash:base64:5]"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "sass-loader",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "compileType": "icss"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "sass-loader",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "oneOf": [
+                    {
+                        "resourceQuery": {},
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "localIdentName": "[local]_[hash:base64:5]"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "stylus-loader",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "use": [
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-style-loader/index.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/css-loader/dist/cjs.js",
+                                "options": {
+                                    "esModule": false,
+                                    "modules": {
+                                        "compileType": "icss"
+                                    },
+                                    "sourceMap": true,
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/postcss-loader/dist/cjs.js",
+                                "options": {
+                                    "sourceMap": true,
+                                    "postcssOptions": {
+                                        "plugins": [
+                                            {
+                                                "postcssPlugin": "postcss-import"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-url"
+                                            },
+                                            {
+                                                "postcssPlugin": "postcss-preset-env",
+                                                "plugins": [
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-media"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-image-set-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-minmax",
+                                                        "AtRule": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-media-queries-aspect-ratio-number-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nesting"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-pseudo-class-any-link"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-attribute-case-insensitive"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-selector-not"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-float-and-clear",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overflow",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-overscroll-behavior",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-resize",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-logical-viewport-units"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-dir-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-initial"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gradients-interpolation-method"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-mix-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-relative-color-syntax"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-lab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-oklab-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-hwb-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-functional-notation"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-rebeccapurple"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-color-hex-alpha"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-light-dark-function"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-double-position-gradients"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-page-break"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-variant"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-is-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-scope-pseudo-class"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gap-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-overflow-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-replace-overflow-wrap",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-place"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-system-ui-font"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-font-format-keywords"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-normalize-display-values"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-content-alt-text"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-ic-unit"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-opacity-percentage",
+                                                        "Declaration": {}
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-text-decoration-shorthand"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-unset-value"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-stepped-value-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-trigonometric-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-exponential-functions"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-clamp"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-nested-calc"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-cascade-layers"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-progressive-custom-properties"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-gamut-mapping"
+                                                    },
+                                                    {
+                                                        "options": {},
+                                                        "postcssPlugin": "autoprefixer"
+                                                    },
+                                                    {
+                                                        "postcssPlugin": "postcss-preset-env"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "loader": "stylus-loader",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "use": [
+                    {
+                        "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/url-loader/dist/cjs.js",
+                        "options": {
+                            "esModule": false,
+                            "limit": 1000,
+                            "name": "[path][name].[ext]"
+                        }
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "use": [
+                    {
+                        "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/url-loader/dist/cjs.js",
+                        "options": {
+                            "esModule": false,
+                            "limit": 1000,
+                            "name": "[path][name].[ext]"
+                        }
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "use": [
+                    {
+                        "loader": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/file-loader/dist/cjs.js",
+                        "options": {
+                            "esModule": false,
+                            "name": "[path][name].[ext]"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "plugins": [
+        {
+            "watchOffset": 11000
+        },
+        {},
+        {},
+        {
+            "profile": false,
+            "modulesCount": 500,
+            "showEntries": false,
+            "showModules": true,
+            "showActiveModules": true,
+            "options": {
+                "name": "server",
+                "color": "orange",
+                "reporters": [
+                    "basic",
+                    "fancy",
+                    "profile",
+                    "stats"
+                ],
+                "reporter": {},
+                "basic": false,
+                "fancy": true,
+                "profile": false,
+                "stats": false
+            },
+            "reporters": [
+                {},
+                {}
+            ]
+        },
+        {},
+        {
+            "options": {
+                "filename": "server.manifest.json"
+            }
+        },
+        {
+            "definitions": {
+                "process.env.NODE_ENV": "\"development\"",
+                "process.mode": "\"development\"",
+                "process.dev": true,
+                "process.static": false,
+                "process.target": "\"server\"",
+                "process.env.VUE_ENV": "\"server\"",
+                "process.browser": false,
+                "process.client": false,
+                "process.server": true,
+                "process.modern": false
+            }
+        },
+        {
+            "definitions": {
+                "URL": [
+                    "url",
+                    "URL"
+                ],
+                "URLSearchParams": [
+                    "url",
+                    "URLSearchParams"
+                ]
+            }
+        }
+    ],
+    "resolve": {
+        "extensions": [
+            ".mjs",
+            ".cjs",
+            ".js",
+            ".json",
+            ".vue",
+            ".jsx",
+            ".wasm"
+        ],
+        "alias": {
+            "~~": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2",
+            "@@": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2",
+            "~": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2",
+            "@": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2",
+            "assets": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/assets",
+            "static": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/static",
+            "vue-meta": "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/vue-meta/dist/vue-meta.common.js",
+            "nuxt_plugin_plugin_31ff3a26": "./components/plugin.js"
+        },
+        "modules": [
+            "node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/nuxt/bin/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/nuxt/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/node_modules",
+            "/Users/dmitrijniseta/Projects/node_modules",
+            "/Users/dmitrijniseta/node_modules",
+            "/Users/node_modules",
+            "/node_modules"
+        ],
+        "plugins": [
+            {
+                "topLevelLoader": {},
+                "default": {
+                    "topLevelLoader": {}
+                }
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "mainFields": [
+            "main",
+            "module"
+        ]
+    },
+    "resolveLoader": {
+        "modules": [
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/@nuxt/webpack/node_modules",
+            "node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/nuxt/bin/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules/nuxt/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/nuxt-2/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/tonconnect-vue-demo/node_modules",
+            "/Users/dmitrijniseta/Projects/ton/node_modules",
+            "/Users/dmitrijniseta/Projects/node_modules",
+            "/Users/dmitrijniseta/node_modules",
+            "/Users/node_modules",
+            "/node_modules"
+        ],
+        "plugins": [
+            {
+                "topLevelLoader": {},
+                "default": {
+                    "topLevelLoader": {}
+                }
+            },
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ]
+    }
+}
